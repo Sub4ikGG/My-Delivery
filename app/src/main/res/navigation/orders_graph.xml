@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_graph"
+    app:startDestination="@id/orderListFragment">
+
+    <fragment
+        android:id="@+id/orderListFragment"
+        android:name="ru.spoonbill.droid.ui.profile.orders.orderslist.OrderListFragment"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" >
+        <action
+            android:id="@+id/action_orderListFragment_to_productsBoughtFragment"
+            app:destination="@id/productsBoughtFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/productsBoughtFragment"
+        android:name="ru.spoonbill.droid.ui.profile.orders.orderslist.ProductsBoughtFragment"
+        android:label="ProductsBoughtFragment"
+        tools:layout="@layout/fragment_products_bought" >
+        <action
+            android:id="@+id/action_productsBoughtFragment_to_orderListFragment"
+            app:destination="@id/orderListFragment"
+            />
+    </fragment>
+</navigation>

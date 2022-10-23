@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_rounded_bottom_sheet">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="70dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_f0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/value_editText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/stroke_box"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_regular"
+        android:inputType="textShortMessage"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/value_confirm_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="250dp"
+        android:background="@drawable/rounded_shape"
+        android:backgroundTint="@color/gray_f0"
+        android:fontFamily="@font/open_sans_semi_bold"
+        android:text="Подтвердить"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/value_editText"
+        app:layout_constraintStart_toStartOf="@+id/value_editText"
+        app:layout_constraintTop_toBottomOf="@+id/value_editText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
